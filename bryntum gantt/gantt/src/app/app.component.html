@@ -3,12 +3,21 @@
     [startDate] = "startDate"
     [tasks] = "tasks"
     [dependencies] = "dependencies"
+    [resources] = "ganttConfig.resources!"
+    [assignments] = "assignments"
 ></bryntum-project-model>
 
 <bryntum-gantt
     #gantt
+    id="container"
     [startDate] = "ganttConfig.startDate!"
     [columns] = "ganttConfig.columns!"
     [endDate] = "ganttConfig.endDate!"
     [project] = "project"
+    [features] = "ganttConfig.features!"
 ></bryntum-gantt>
+
+<bryntum-resource-utilization
+    [partner]="gantt.instance"
+    [project] = "project"
+></bryntum-resource-utilization>
